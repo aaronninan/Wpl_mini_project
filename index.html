@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Talent Hub</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Cricket Talent Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="create-profile.html">Create Profile</a></li>
+          <li><a href="profile.html">Profiles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2 style="color: #3498db;">Showcase Your Cricket Skills to the World!</h2>
+        <img src="CRIC.jpg" alt="Cricket Skills Showcase" style="max-width: 50%; height: auto;" />
+        <p>Create your profile, upload stats, and get discovered by scouts.</p>
+        <a href="profile.html" class="btn" style="background-color: #3498db; color: white;">Explore Players</a>
+      </div>
+    </section>
+
+    <section class="account-options" style="border: 1px solid #3498db; border-radius: 10px; padding: 20px; margin-top: 20px;">
+      <div class="container">
+        <p>If you don't have an account, <a href="create-profile.html" style="color: #3498db;">sign up here</a>.</p>
+        <p>If you already have an account, <a href="login.html" style="color: #3498db;">log in here</a>.</p>
+      </div>
+    </section>
+
+    <script>
+      function checkLogin() {
+        // This is a placeholder for actual login check logic
+        const isLoggedIn = false; // Change this based on actual login state
+        if (!isLoggedIn) {
+          document.querySelector('.create-profile-link').style.display = 'none';
+        }
+      }
+      checkLogin();
+    </script>
+
+
+    <section class="featured">
+      <div class="container">
+        <h3 style="color: #e74c3c;">Featured Players</h3>
+        <div class="featured-players">
+          <div class="player-card" style="border: 1px solid #3498db; border-radius: 10px; padding: 10px;">
+            <img src="player.jpg" alt="John Doe - Right-Hand Batsman" />
+            <h4>John Doe</h4>
+            <p>Right-Hand Batsman | Leg-Spin Bowler</p>
+            <p>U-19 Regional Champion</p>
+            <a href="profile.html" class="btn">View Profile</a>
+          </div>
+          <div class="player-card" style="border: 1px solid #3498db; border-radius: 10px; padding: 10px;">
+            <img src="player2.jpg" alt="Jane Smith - Left-Hand Batsman" />
+            <h4>Jane Smith</h4>
+            <p>Left-Hand Batsman | Fast Bowler</p>
+            <p>State-Level Champion</p>
+            <a href="profile.html" class="btn">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cricket Talent Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

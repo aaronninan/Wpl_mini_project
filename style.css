@@ -1,8 +1,8 @@
 /* General Styles */
 body {
+  margin: 0;
+  padding: 0;
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4; /* Light background for better contrast */
     color: #333; /* Dark text for readability */
 }
@@ -15,9 +15,9 @@ body {
 
 /* Header Styles */
 header {
-    background: #2980b9; /* Header background color */
+    /* background: #2980b9; Header background color */
     color: white;
-    padding: 20px 0;
+    padding:0px;
 }
 
 header h1 {
@@ -31,7 +31,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 
 nav ul li a {
@@ -41,9 +41,9 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background: url('CRIC.jpg') no-repeat center center/cover; /* Hero background */
-    color: white;
-    padding: 60px 0;
+    background: url('home-page.avif') no-repeat center center/cover; /* Hero background */
+    /* color: white;
+    padding: 60px 0; */
     text-align: center;
 }
 
@@ -55,23 +55,8 @@ nav ul li a {
 .featured-players {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin:20px 0;
 }
-
-.player-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: 30%;
-}
-
-.player-card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
 /* Login Form */
 .login {
     background: rgba(255, 255, 255, 0.9);
@@ -94,4 +79,177 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Create Profile Page Styles */
+.stats-section {
+  display: none;
+}
+
+/* Show relevant stats section based on selected role */
+#role:focus ~ #battingStats,
+#role[value="batsman"] ~ #battingStats {
+:root {
+  --color: black;
+  --sec-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--color);
+  color: var(--sec-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list li a {
+  text-decoration: none;
+  color: var(--sec-color);
+  font-size: 1.1rem;
+}
+
+.create-profile {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.name-input,
+.email-input,
+.role-input {
+  border: 2px solid var(--sec-color);
+  padding: 1rem;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.name,
+.email,
+.role {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+input,
+select {
+  border: 2px solid var(--sec-color);
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 40px;
+  width: 100%;
+  color: var(--color);
+}
+
+.button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+button {
+  background-color: var(--sec-color);
+  color: var(--color);
+  border: 2px solid var(--sec-color);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color);
+  color: var(--sec-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .head h2 {
+    font-size: 1.5rem;
+  }
+  
+  .list {
+    gap: 1rem;
+  }
+  
+  .form {
+    padding: 0 1rem;
+  }
+  
+  .name-input,
+  .email-input,
+  .role-input {
+    padding: 0.8rem;
+  }
+  
+  .button {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .head h2 {
+    font-size: 1.3rem;
+  }
+  
+  .list li a {
+    font-size: 1rem;
+  }
+  
+  input, select {
+    padding: 0.6rem;
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+  }
+}
 }
